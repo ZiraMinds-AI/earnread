@@ -1,0 +1,35 @@
+{
+  "name": "ai-read-to-earn",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "setup-android": "node scripts/setup-android.js",
+    "build:android": "vite build && npx cap sync android",
+    "open:android": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.7.4",
+    "@capacitor/app": "^5.0.0",
+    "@capacitor/cli": "^5.7.4",
+    "@capacitor/core": "^5.7.4",
+    "@capacitor/device": "^5.0.0",
+    "@google/genai": "^1.10.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "capacitor": {
+    "appId": "com.aireadtoearn.app",
+    "appName": "AI Read to Earn",
+    "webDir": "dist"
+  }
+}

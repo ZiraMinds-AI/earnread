@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ReadEarn: AI Powered Books</string>
+    <string name="title_activity_main">ReadEarn: AI Powered Books</string>
+    <string name="package_name">com.ziraminds.earnapp</string>
+    <string name="custom_url_scheme">com.ziraminds.earnapp</string>
+</resources>
