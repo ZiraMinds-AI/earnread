@@ -3,7 +3,7 @@ import React from 'react';
 import { useAppContext } from '../hooks/useAppContext';
 import { CoinIcon } from './icons/CoinIcon';
 
-const DAILY_REWARD_AMOUNT = 50;
+const DAILY_REWARD_AMOUNT = 5;
 
 const DailyRewardModal = () => {
   const { state, dispatch } = useAppContext();

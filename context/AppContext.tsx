@@ -1,12 +1,11 @@
 
-import React, { createContext, useReducer, useEffect, ReactNode } from 'react';
+import { createContext, useReducer, useEffect, ReactNode } from 'react';
 import { AppState, AppAction, AppContextType, Story } from '../types';
 
 const initialState: AppState = {
   points: 100,
   transactions: [],
   stories: [],
-  showFreeCoinsModal: false,
   showInterstitial: false,
   homeNavigations: 0,
   coinAnimation: { key: 0, count: 0 },
@@ -41,10 +40,6 @@ const appReducer = (state: AppState, action: AppAction): AppState => {
           { id: new Date().toISOString(), description: action.payload.description, amount: -action.payload.points, date: new Date().toISOString() }
         ],
       };
-    case 'SHOW_FREE_COINS_MODAL':
-      return { ...state, showFreeCoinsModal: true };
-    case 'HIDE_FREE_COINS_MODAL':
-      return { ...state, showFreeCoinsModal: false };
     case 'NAVIGATE_HOME':
       const newNavCount = state.homeNavigations + 1;
       return {

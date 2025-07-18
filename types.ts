@@ -26,7 +26,6 @@ export interface AppState {
   points: number;
   transactions: Transaction[];
   stories: Story[];
-  showFreeCoinsModal: boolean;
   showInterstitial: boolean;
   homeNavigations: number;
   coinAnimation: {
@@ -41,8 +40,7 @@ export type AppAction =
   | { type: 'SET_STATE'; payload: any }
   | { type: 'ADD_POINTS'; payload: { points: number; description: string } }
   | { type: 'SPEND_POINTS'; payload: { points: number; description: string } }
-  | { type: 'SHOW_FREE_COINS_MODAL' }
-  | { type: 'HIDE_FREE_COINS_MODAL' }
+
   | { type: 'NAVIGATE_HOME' }
   | { type: 'DISMISS_INTERSTITIAL' }
   | { type: 'ADD_STORY_START'; payload: { id: string; title: string, summary: string } }

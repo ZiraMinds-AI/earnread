@@ -3,7 +3,7 @@ import { useAppContext } from '../hooks/useAppContext';
 import { CoinIcon } from './icons/CoinIcon';
 
 interface FlyingCoinsProps {
-  targetRef: React.RefObject<HTMLDivElement>;
+  targetRef: React.RefObject<HTMLDivElement | null>;
 }
 
 interface Coin {
@@ -21,7 +21,7 @@ const FlyingCoins: React.FC<FlyingCoinsProps> = ({ targetRef }) => {
   const [coins, setCoins] = useState<Coin[]>([]);
   
   useEffect(() => {
-    if (count > 0 && key > 0 && targetRef.current) {
+    if (count > 0 && key > 0 && targetRef?.current) {
       const targetRect = targetRef.current.getBoundingClientRect();
       const targetPos = {
         x: targetRect.left + targetRect.width / 2,
